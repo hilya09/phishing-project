@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phishing Detection</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet" />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- JavaScript -->
+    <script src={{ url_for('static', filename='/js/jquery_3.6.0.min.js') }} ></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href={{ url_for('static', filename='/css/style.css') }} type="text/css">
+  </head>
+
+  <body>
+
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="#home" class="navbar-logo">phishing<span>detection</span>.</a>
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <!-- <a href="#menu">Menu</a> -->
+        <a href="#contact">Kontak</a>
+      </div>
+      <div class="navbar-extra">
+        <a href="#detection" class="myButton">Mulai</a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start-->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Website Deteksi <span>Link Phishing</span></h1>
+        <p>Melindungi Anda di dunia digital dan menjaga perbatasan dunia digital Anda dengan deteksi link phishing</p>
+        <a href="#detection" class="cta">Cek Sekarang</a>
+      </main>
+    </section>
+    <!-- Hero Section End-->
+    
+    <!-- About Section Start -->
+    <section id="about" class="about">
+      <h2><span>Tentang</span> Kami</h2>
+
+      <div class="row">
+        <div class="about-img">
+          <img src={{ url_for('static', filename='/images/tentang-kami.jpg') }} alt="Tentang Kami">
+        </div>
+        <div class="content">
+          <h3>Apa itu <span>phishing<span class="format">detection</span>.</span> ?</h3>
+          <p>Aplikasi ini dibuat untuk menentukan membantu pengguna internet mendeteksi URL yang terindikasi phishing.</p>
+          <p>Pengguna hanya cukup menginputkan url yang dicurigai untuk dapat mengetahui klasifikasi url phishing dan tidak phishing.</p>
+          <p>Aplikasi ini bertujuan untuk memberikan pemahaman kepada pengguna internet tentang potensi ancaman phishing dan 
+            membantu mereka mengambil langkah-langkah pencegahan yang diperlukan untuk melindungi diri mereka dari serangan cybercrime.</p>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Menu Section Start -->
+    <!-- <section id="menu" class="menu">
+      <h2><span>Menu</span> Kami</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure explicabo ea molestias amet ex corporis.</p>
+      
+      <div class="row slideanim">
+        <div class="menu-card">
+          <img src={{ url_for('static', filename='/images/1.jpg') }}  alt="Lorem" class="menu-card-img">
+          <h3 class="menu-card-title">- Lorem -</h3>
+          <p class="menu-card-price">Lorem</p>
+        </div>
+        <div class="menu-card">
+          <img src={{ url_for('static', filename='/images/1.jpg') }}  alt="Lorem" class="menu-card-img">
+          <h3 class="menu-card-title">- Lorem -</h3>
+          <p class="menu-card-price">Lorem</p>
+        </div>
+        <div class="menu-card">
+          <img src={{ url_for('static', filename='/images/1.jpg') }}  alt="Lorem" class="menu-card-img">
+          <h3 class="menu-card-title">- Lorem -</h3>
+          <p class="menu-card-price">Lorem</p>
+        </div>
+        <div class="menu-card">
+          <img src={{ url_for('static', filename='/images/1.jpg') }}  alt="Lorem" class="menu-card-img">
+          <h3 class="menu-card-title">- Lorem -</h3>
+          <p class="menu-card-price">Lorem</p>
+        </div>
+      </div>
+    </section> -->
+    <!-- Menu Section End -->
+
+    <!-- Kontak Phishing Detection Start -->
+    <section id="detection" class="detection">
+      <h2><span>Phishing Link</span> Detection</h2>
+      <p>Masukkan URL yang Anda curigai</p>
+      
+      <div class="row">
+        <form action="">
+          <div class="input-group">
+            <i data-feather="link-2"></i>
+            <input type="text" name="data" id="inputVal_link" onInput="$('#inputVal_link').html($(this).val())" placeholder="scheme://subdomain.domain.com/path/">
+          </div>
+          <button type="submit" id="prediksi_submit" class="btn">Periksa</button>
+        </form>
+        <div class="result" id="hasil_prediksi"></div>
+      </div>
+    </section>
+    <!-- Kontak Phishing Detection End -->
+
+    <!-- Kontak Section Start -->
+    <section id="contact" class="contact">
+      <h2><span>Kontak</span> Kami</h2>
+      <p>Butuh bantuan atau ingin mengetahui kami lebih lanjut? Jangan ragu untuk mengirim pesan di sini!</p>
+      
+      <div class="row">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63421.49880524384!2d107.45504429999997!3d-6.541416099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e690e60454c6667%3A0x7ee7eda6d6e4556f!2sPurwakarta%2C%20Purwakarta%20Regency%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1713744489051!5m2!1sen!2sid"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+
+        <form action="">
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input type="text" placeholder="nama">
+          </div>
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <input type="text" placeholder="email">
+          </div>
+          <div class="input-group">
+            <i data-feather="phone"></i>
+            <input type="text" placeholder="nohp">
+          </div>
+          <button type="submit" class="btn">kirim pesan</button>
+        </form>
+      </div>
+    </section>
+    <!-- Kontak Section End -->
+
+    <!-- Footer Start -->
+      <footer>
+        <div class="socials">
+          <a href="#"><i data-feather="instagram"></i></a>
+          <a href="#"><i data-feather="twitter"></i></a>
+          <a href="#"><i data-feather="facebook"></i></a>
+        </div>
+
+        <div class="links">
+          <a href="#home">Home</a>
+          <a href="#about">Tentang Kami</a>
+          <a href="#menu">Menu</a>
+          <a href="#contact">Kontak</a>
+        </div>
+
+        <div class="credit">
+          <p>Created by <a href="">hilyaanbiyani</a>. | &copy; 2024.</p>
+        </div>
+      </footer>
+    <!-- Footer End -->
+    
+    <!-- My JavaScript -->
+    <!-- JavaScript untuk Animasi Scroll dan Prediksi Model -->
+    <script  src={{ url_for('static', filename='/js/script.js') }}></script>
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
