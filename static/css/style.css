@@ -365,12 +365,15 @@ body {
   font-weight: 400;
 }
 
+/* Hasil prediksi */
 .detection .row .result .hasil-prediksi.phishing {
   color: red;
+  font-size: 2rem;
 }
 
 .detection .row .result .hasil-prediksi.non-phishing {
   color: var(--primary);
+  font-size: 2rem;
 }
 
 /* Footer */
